@@ -3,15 +3,15 @@ import random
 
 moves = ["w", "a", "s", "d"]
 
-c = maze.Connect('admin', 'vylet')
-print('Šířka hrací plochy je', c.width)
-print('Výška hrací plochy je', c.height)
-moje_x = c.x()
-moje_y = c.y()
-print('Nacházíš se na souřadnicích', moje_x, moje_y)
-print('Políčko pod tebou má hodnotu', c.get(moje_x, moje_y - 1))
-print('Čekám, až klikneš na webu na tlačítko Spustit:')
+def canMove(x,y,field):
+    return field[y][x] == 0 or field[y][x] == 3
+
+c = maze.Connect('admin', 'tojedalka')
+
+
 c.wait()
-for i in range(1000):
-    if not c.move(random.choice(moves)):
-        print('Posun se nepodařil, protože:', c.error)
+while True:
+    moje_x = c.x()
+    moje_y = c.y()
+    if canMove(moje_x, moje_y, c.get_all()): c.move(moves[1])
+    if canMove(moje_x, moje_y, c.get_all()): c.move(moves[1])
