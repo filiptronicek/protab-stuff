@@ -10,7 +10,7 @@ field = c.get_all()
 moje_x = c.x()
 moje_y = c.y()
 
-keyCombos = [(0, 1, "s"), (0, -1, "w"), (1, 0, "d"), (-1, 0, "a")]
+keyCombos = [(0, -1, "w"), (1, 0, "d"), (0, 1, "s"), (-1, 0, "a")]
 
 positions = {
     "curr": [moje_x, moje_y]    
@@ -28,7 +28,7 @@ def calcPath():
     while True:
         for moveN in keyCombos:
             if canMove(positions['curr'][0] + moveN[0], positions['curr'][1] + moveN[1], ammunation):
-                move(moveN[2])
+                move(moveN[0], moveN[1], ammunation)
                 break
         if(positions['curr'] == ammunation[-1]):
             print(ammunation)

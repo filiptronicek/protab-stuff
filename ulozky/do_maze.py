@@ -10,8 +10,13 @@ c = maze.Connect('admin', 'tojedalka')
 
 
 c.wait()
-while True:
+for i in range(300):
     moje_x = c.x()
     moje_y = c.y()
-    if canMove(moje_x, moje_y, c.get_all()): c.move(moves[1])
-    if canMove(moje_x, moje_y, c.get_all()): c.move(moves[1])
+    if not c.move("d"):
+        if not c.move("s"):
+            if not c.move("a"):
+                c.move("w")
+while True:
+    i = input("?")
+    c.move(i)
