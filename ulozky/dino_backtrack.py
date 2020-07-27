@@ -8,7 +8,7 @@ field = c.get_all()
 jmpLen = 4
 
 inp = []
-jumps = [10000  ]
+jumps = [10000]
 
 for line in field:
     inp.append(line[-1])
@@ -21,7 +21,10 @@ def move():
 
 r = list(reversed(inp))
 
-while jumps[-1] > jmpLen:
-    if inp[jumps[-1] - jmpLen] == 1:
-        jumps.append(inp[jumps[-1] - jmpLen])
+for i,j in enumerate(inp):
+    if inp[jumps[-1] - jmpLen - i] == 1:
+        jumps.append(jumps[-1] - jmpLen - i)
+        print(jumps)
+        break
+
 print(jumps)
