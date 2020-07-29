@@ -2,7 +2,7 @@ import os
 
 
 def run():
-    os.system("python dinosaurus.py")
+    os.system("python mimo.py")
     try:
         run()
     except Exception:
