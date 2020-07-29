@@ -17,7 +17,7 @@ const floatParser = (st, v, c) => {
 }
 
 let computedNum = 0
-for(s of stling) {
+for (s of stling) {
     index = stling.indexOf("-") === 0 ? stling.indexOf(s) - 1 : stling.indexOf(s)
     computedNum = floatParser(s, index, computedNum)
     computedNum > 0 & stling.indexOf("-") === 0 ? computedNum = computedNum * -1 : console.log("")
