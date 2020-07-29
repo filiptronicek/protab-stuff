@@ -1,4 +1,5 @@
 import maze
+from tqdm import tqdm
 import time
 
 c = maze.Connect('oof2win2', 'velociraptor')
@@ -8,6 +9,7 @@ field = c.get_all()
 jmpLen = 4
 
 inp = []
+
 jumps = []
 
 #for every line in the playing array add the bottom row of actual places where you jump on

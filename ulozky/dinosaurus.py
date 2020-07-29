@@ -41,13 +41,13 @@ print("Aiming to hit:",len(inp))
 last = ""
 
 while True:
-    time.sleep(0.1)
+    time.sleep(0.5)
     print(f"at {c.x()}")
     if last == c.x(): c.move("d")
     last = c.x()
-    if inp[c.x() + 3] == 0 and inp[c.x() + 4] == 1:
-        c.move("w")
-    if inp[c.x() + 5] == 0 and inp[c.x() + 7] == 0 and inp[c.x() + 6] == 1:
+    if inp[c.x() + 5] == 0 and inp[c.x() + 8] == 1 and inp[c.x() + 4] == 1:
+        c.move("d")
+        c.move("d")
         c.move("d")
         c.move("d")
         c.move("w")
