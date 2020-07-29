@@ -36,9 +36,9 @@ print(" working on backtracking")
 # while i is smaller than the length of the array
 for i in range(len(r)):
     if i < 9990:
-        if (
-            r[i + 3] == 1 and r[i + 7] == 1
-        ):  # there is a hole and it is not on the last spot
+        if (r[i + 3] == 1 and
+                r[i +
+                  7] == 1):  # there is a hole and it is not on the last spot
             # if (r[i+2] == 0):               #if 2 blocks ahead there is a hole
             # append the location of the jump to the array, working from back to front
             jumps.append(i)
