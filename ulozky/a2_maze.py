@@ -14,12 +14,26 @@ c = maze.Connect("oof2win2", "vylet")
 
 def neighbors(vertex_x, vertex_y):
     #finds the neighbors of the vertex
-    graph = c.get_all()
+    #this SHOULD work. if it doesnt, it is an easy process of just rearranging the order of the appending
     n = []
-    n.append(graph[vertex_x][vertex_y+1])
-    n.append(graph[vertex_x][vertex_y-1])
-    n.append(graph[vertex_x+1][vertex_y])
-    n.append(graph[vertex_x-1][vertex_y])
+    n.append(c.get(vertex_x, vertex_y+1))   #1
+    n.append(c.get(vertex_x, vertex_y-1))   #2
+    n.append(c.get(vertex_x+1, vertex_y))   #3
+    n.append(c.get(vertex_x-1, vertex_y))   #4
+
+    #visualisation, can/should be turned off
+    a1 = [9, n[3], 9]
+    a2 = [n[1], 5, n[0]]
+    a3 = [9, n[2], 9]
+    print(*a1)
+    print(*a2)
+    print(*a3)
+    """
+    #vertex_x and vertex_y = O for Origin, ! = not returned
+    !4!
+    2O1
+    !3!
+    """
     return n
 
 print(neighbors(c.x(), c.y()))
