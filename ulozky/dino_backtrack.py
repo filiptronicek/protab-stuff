@@ -1,6 +1,7 @@
+import time
+
 import maze
 from tqdm import tqdm
-import time
 
 c = maze.Connect("oof2win2", "velociraptor")
 

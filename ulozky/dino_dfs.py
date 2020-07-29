@@ -1,6 +1,7 @@
-import maze
-import time
 import sys
+import time
+
+import maze
 
 # FIFO array of jump and run, set with 'w' and 'd'
 path = []

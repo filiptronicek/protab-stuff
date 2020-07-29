@@ -1,6 +1,7 @@
-import maze
 import time
 from collections import Counter
+
+import maze
 
 c = maze.Connect("oof2win2", "velociraptor")
 print("gettig area")
