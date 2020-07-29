@@ -8,7 +8,7 @@ field = c.get_all()
 
 inp = []
 options = []
-#for every line in the playing array add the bottom row of actual places where you jump on
+# for every line in the playing array add the bottom row of actual places where you jump on
 for line in field:
     inp.append(line[-1])
 print('collecting options')
