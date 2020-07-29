@@ -57,3 +57,6 @@ def dfs():
 
 
 run()
+
+# TODO:
+# Fix movement of the dinosaur

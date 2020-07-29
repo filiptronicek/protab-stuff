@@ -4,7 +4,6 @@ import random
 
 c = maze.Connect('admin', 'vylet')
 
-
 field = c.get_all()
 
 moje_x = c.x()
