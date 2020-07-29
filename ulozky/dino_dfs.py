@@ -1,5 +1,5 @@
 import sys
-import time
+from tqdm import tqdm
 
 import maze
 
@@ -19,8 +19,7 @@ for line in whole:
 
 def run():
     stack = dfs()
-    for i in range(c.width):
-        print(i)  # progress bar
+    for i in tqdm(range(c.width)):
         diff = stack[i + 1] - stack[i]
         if diff == 1:
             c.move("d")
