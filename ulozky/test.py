@@ -1,21 +1,16 @@
 import maze, time
+from getkey import getkey, keys
 
 c = maze.Connect("oof2win2", "runda")
-
-print(c.width, c.height)
-for i in range(995):
-    a = 'w'
-    time.sleep(0.005)
-    print(c.x(), c.y())
-    #('direction: ')
-    if a == 'w':
-        c.move('w')
-    elif a == 'a':
-        c.move('a')
-    elif a == 's':
-        c.move('s')
-    elif a == 'd':
-        c.move('d')
-    else:
-        print(c.x(), c.y())
 c.wait()
+print(c.width, c.height)
+while True:
+    key = getkey()
+    if key == keys.LATIN_SMALL_LETTER_W:
+        c.move('w')
+    elif key == keys.LATIN_SMALL_LETTER_A:
+        c.move('a')
+    elif key == keys.LATIN_SMALL_LETTER_S:
+        c.move('s')
+    elif key == keys.LATIN_SMALL_LETTER_D:
+        c.move('d')

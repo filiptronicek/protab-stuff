@@ -44,7 +44,7 @@ def dfs():
             break
         if arr[w + 1] == 1 and visited[w + 1] == 0 and w + 1 < c.width:
             stack.append(w + 1)
-            visited[w + 1] = 1
+            visited[w + 1] = 1  
         elif arr[w + 4] == 1 and visited[w + 4] == 0 and w + 4 < c.width:
             stack.append(w + 4)
             visited[w + 4] = 1
@@ -56,6 +56,3 @@ def dfs():
 
 
 run()
-
-# TODO:
-# Fix movement of the dinosaur

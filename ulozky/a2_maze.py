@@ -59,8 +59,8 @@ def dfs(startx, starty, endx, endy):
     visited = set()
     path = [[startx, starty]]
     while True:
+        print('path:', path)
         print('neighbors:', neighbors(path[-1][0], path[-1][1]))
-        print(path)
         done = False
 
         #finished
@@ -69,6 +69,7 @@ def dfs(startx, starty, endx, endy):
         
         #move to different vertex, n = neighbors
         for n in neighbors(path[-1][0], path[-1][1]):
+            print(n)
             if n == 0:                      #if it is a free spot
                 if n not in visited:
                     visited.add(n)
