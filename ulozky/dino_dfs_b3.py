@@ -8,7 +8,7 @@ path = []
 # array of where it was tried to jump from. starts with -1 to keep the index in range
 tried = []
 
-c = maze.Connect("oof2win2", "archeopteryx")
+c = maze.Connect("admin", "archeopteryx")
 
 
 # gets the whole array and then gets only the bottom line, with 1s and 0s of land and lava
