@@ -1,16 +1,36 @@
 import maze, time
-from getkey import getkey, keys
 
-c = maze.Connect("oof2win2", "runda")
-c.wait()
+c = maze.Connect("oof2win2", "mallet")
+w = c.width
+h = c.height
 print(c.width, c.height)
-while True:
-    key = getkey()
-    if key == keys.LATIN_SMALL_LETTER_W:
+def w():
+    for i in range(c.height*10):
         c.move('w')
-    elif key == keys.LATIN_SMALL_LETTER_A:
+def aa():
+    for i in range(c.height*10):
         c.move('a')
-    elif key == keys.LATIN_SMALL_LETTER_S:
+def s():
+    for i in range(c.height*10):
         c.move('s')
-    elif key == keys.LATIN_SMALL_LETTER_D:
+def d():
+    for i in range(c.height*10):
         c.move('d')
+while True:
+    a = input('dir: ')
+    if a == 'a':
+        c.move('a')
+    elif a == 'w':
+        c.move('w')
+    elif a == 's':
+        c.move('s')
+    elif a == 'd':
+        c.move('d')
+    elif a == 'aa':
+        aa()
+    elif a == 'ww':
+        w()
+    elif a == 'ss':
+        s()
+    elif a == 'dd':
+        d()

@@ -3,7 +3,7 @@ import time
 
 def do():
     try:
-        c = maze.Connect('admin', 'lebkoun')
+        c = maze.Connect('oof2win2', 'yyytyy')
 
         while True:
             for i in range(c.height):
@@ -17,4 +17,5 @@ def do():
                     c.move('a')
     except:
         do()
+print('working')
 do()
