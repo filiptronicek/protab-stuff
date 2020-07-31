@@ -17,7 +17,7 @@ for i in range(h):
         if line[j] == 2:
             for k in range(20*5):
                 c.move(dir[a])
-    b = c.get(c.x, c.y+1)
+    b = c.get(c.x(), c.y()+1)
     print(b)
     if b == 2:
         for k in range(20):

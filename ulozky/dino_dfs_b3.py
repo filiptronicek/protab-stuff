@@ -44,7 +44,7 @@ def run():
             c.move('d')
             c.move('d')
             c.move('d')
-            #c.move('d')    #should work when this is commented out
+            c.move('d')
         else:
             print("wtf")
     print("fucking done")
