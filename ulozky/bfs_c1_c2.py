@@ -8,7 +8,7 @@ arr    = c.get_all()   #the whole map
 width  = c.width
 height = c.height
 
-def neighbors(v):
+def neighbors(v: list):
     #returns the neigbors of the x y coords in an array
     #return as [[n1_x, n1_y]] etc.
     n = []
@@ -27,7 +27,7 @@ def neighbors(v):
     #print(n)
     return n
 
-def getPos(thing):
+def getPos(thing: int):
     #function that finds the object from a numberical value given and returns x, y coords of that specific (or first) object
     #chest = 3
     #wall  = 2
@@ -39,7 +39,7 @@ def getPos(thing):
             if (arr[i][j] == thing):
                 return (i, j)
 
-def bfs(start, goal):
+def bfs(start: list, goal: list):
     queue   = deque([start])
     visited = set(queue)
     path    = dict()
