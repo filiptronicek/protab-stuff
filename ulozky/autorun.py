@@ -1,11 +1,12 @@
 import os
 
+it = 0
 
 def run():
-    os.system("python3 ulozky/alien.py")
+    os.system("python3 ulozky/mimo.py")
     try:
         run()
-        print(1)
+        print("Ran run no.", it)
     except Exception:
         run()
 run()

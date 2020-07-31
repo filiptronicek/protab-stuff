@@ -1,12 +1,15 @@
 import maze, random, time
 
-c = maze.Connect("oof2win2", "lebkoun")
+def do():
+    try:
+        c = maze.Connect("admin", "runda")
 
-p = 0
-while True:
-    p += 1
-    i = random.choice(["a", "d", "s"])
-    if i == "s":
-        for i in range(5):
-            c.move("w")
-    else: c.move(i)
+        p = 0
+        while True:
+            p += 1
+            i = random.choice(["a", "d", "s", "w"])
+            c.move(i)
+            print(c.x(), c.y())
+    except:
+        do()
+do()
