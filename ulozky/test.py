@@ -4,18 +4,6 @@ c = maze.Connect("oof2win2", "mallet")
 w = c.width
 h = c.height
 print(c.width, c.height)
-def w():
-    for i in range(c.height*10):
-        c.move('w')
-def aa():
-    for i in range(c.height*10):
-        c.move('a')
-def s():
-    for i in range(c.height*10):
-        c.move('s')
-def d():
-    for i in range(c.height*10):
-        c.move('d')
 while True:
     a = input('dir: ')
     if a == 'a':

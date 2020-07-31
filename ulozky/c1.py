@@ -28,7 +28,7 @@ def neighbors(v):
         if 0 < y + k[1] < len(field) and 0 < x + k[0] < len(field[y]) and field[y + k[1]][x + k[0]] != 2:
             ne.append((y + k[1], x + k[0]))
             print("Appending", str((x + k[0], y + k[1])), "using", k[2])
-    return ne
+    return nee
 
 def bfs(start, end):
     queue = deque([start])
@@ -48,7 +48,7 @@ def bfs(start, end):
             for n in ns:
                 if n not in beenTo:
                     queue.append(n)
-                    beenTo.add(n)
+                    beento.add(n)
                     direction[n] = v
 
 print(f"Calling BFS with start {str([0,1])} and end of {str([3,0])}")

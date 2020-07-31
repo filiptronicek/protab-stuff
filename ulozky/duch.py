@@ -43,7 +43,7 @@ def dfs(start, end):
                 
         #go back
         if not done:
-            path.pop(-1)
+            path.pop(0)
 path = dfs(1, 7)
 field = c.get_all()
 

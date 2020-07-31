@@ -2,8 +2,7 @@ import maze
 import time
 
 def do():
-    try:
-        c = maze.Connect('oof2win2', 'yyytyy')
+        c = maze.Connect('oof2win2', 'emzak')
 
         while True:
             for i in range(c.height):
@@ -15,7 +14,4 @@ def do():
                     c.move('w')
                     c.move('w')
                     c.move('a')
-    except:
-        do()
-print('working')
 do()

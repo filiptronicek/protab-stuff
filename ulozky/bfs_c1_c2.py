@@ -37,7 +37,8 @@ def getPos(thing: int):
     for i in range(height):
         for j in range(width):
             if (arr[i][j] == thing):
-                return (i, j)
+                #return (i, j)
+                return (10, 10)
 
 def bfs(start: list, goal: list):
     queue   = deque([start])
