@@ -1,7 +1,8 @@
 from collections import deque
-import maze, time
+import maze
+import time
 
-c = maze.Connect('oof2win2', 'blizko')  
+c = maze.Connect('oof2win2', 'nejbliz')  
 
 arr    = c.get_all()   #the whole map
 width  = c.width
@@ -68,17 +69,20 @@ def doPath(path):
     while now < len(path):
         dx = path[now][0] - path[prev][0]
         dy = path[now][1] - path[prev][1]
-        time.sleep(0.1)
+        time.sleep(0.05)
         print(dx, dy)
 
         if dx == 1:
-            c.move('a')
-        if dx == -1:
             c.move('d')
+        if dx == -1:
+            c.move('a')
         if dy == 1:
             c.move('s')
         if dy == -1:
-            c.move('w')
+            c.move('w') 
+        
+        prev += 1
+        now  += 1
     return
 
 def run():
