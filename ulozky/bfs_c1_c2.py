@@ -86,7 +86,7 @@ def doPath(path):
     return
 
 def run():
-    print('searching to:', getPos(3))
+    print('searching path to:', getPos(3), "from", str([c.x(), c.y()]))
     path = bfs((c.x(), c.y()), getPos(3))
     #path = bfs(6, 9)
     if path is not None:    #if it found a path
