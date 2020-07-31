@@ -3,7 +3,6 @@ import maze, time
 from collections import deque
 
 c = maze.Connect("admin", "nejbliz")
-c.wait()
 print(c.width, c.height)
 
 field = c.get_all()
@@ -16,11 +15,12 @@ def findEnd():
                 return [j, h]
 
 def neighbors(v):
+    print("Unpacking:", v)
     x, y = v
 
     ne = []
     for k in keyCombos:
-        if field[y + k[1]][x + k[0]] != 2:
+        if field[y + k[1]][x + k[0]] != 2 and y + k[1] < len(field) and x + k[0] < len(field[y]):
             ne.append([x + k[0], y + k[1]])
     return ne
 
@@ -31,7 +31,7 @@ def bfs(start, end):
 
     while len(queue) > 0:
         v = queue.popleft()
-
+        print("V is", list(v))
         if v == end:
             cesta = [v]
             while v != start:
