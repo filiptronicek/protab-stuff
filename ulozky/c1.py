@@ -21,14 +21,13 @@ def findEnd():
                 return [j, h]
 
 def neighbors(v):
-    print("Unpacking:", v)
-    x, y = v
+    y, x = v
 
     ne = []
     for k in keyCombos: 
         if 0 < y + k[1] < len(field) and 0 < x + k[0] < len(field[y]) and field[y + k[1]][x + k[0]] != 2:
-            ne.append((x + k[0], y + k[1]))
-    print("Adding",str(ne))
+            ne.append((y + k[1], x + k[0]))
+            print("Appending", str((x + k[0], y + k[1])), "using", k[2])
     return ne
 
 def bfs(start, end):
@@ -50,6 +49,7 @@ def bfs(start, end):
                 if n not in beenTo:
                     queue.append(n)
                     beenTo.add(n)
+                    direction[n] = v
 
-print(f"Calling BFS with start {str([c.x(), c.y()])} and end of {str(findEnd())}")
-bfs([0,1], findEnd())
+print(f"Calling BFS with start {str([0,1])} and end of {str([3,0])}")
+bfs([0,1], [3,0])
