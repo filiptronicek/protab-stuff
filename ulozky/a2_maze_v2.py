@@ -1,7 +1,7 @@
 import maze
 import time
 
-c = maze.Connect('oof2win2', 'vylet')
+c = maze.Connect('admin', 'vylet')
 
 arr = c.get_all()
 

@@ -1,6 +1,6 @@
 import maze
 
-c = maze.Connect("admin", "hammer")
+c = maze.Connect("admin", "jakjako")
 print(c.width, c.height)
 
 while True:

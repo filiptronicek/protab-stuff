@@ -1,4 +1,4 @@
-import sys
+import sys, time
 from tqdm import tqdm
 
 import maze
@@ -18,33 +18,32 @@ for line in whole:
     arr.append(line[-1])
 # arr is now the row of 1s and 0s of land and lava
 
+def move(type: str, amnt: int):
+    key = ""
+    if type == 'jump': key = "w"
+    elif type == 'walk': key = "d"
+    for i in range(amnt):
+        c.move(key)
+
 def run():
     stack = dfs()
     for i in tqdm(range(c.width-100)):
+        time.sleep(0.05)
         diff = stack[i + 1] - stack[i]
         if diff == 1:
             c.move("d")
         elif diff == 4:
             c.move('w')
-            c.move('d')
-            c.move('d')
-            c.move('d')
+            move("walk", 3)
         elif diff == 6:
             c.move('w')
             c.move('w')
-            c.move('d')
-            c.move('d')
-            c.move('d')
-            c.move('d')
+            move("walk", 4)
         elif diff == 8:
             c.move('w')
             c.move('d')
             c.move('w')
-            c.move('d')
-            c.move('d')
-            c.move('d')
-            c.move('d')
-            c.move('d')
+            move("walk", 5)
         else:
             print("wtf")
     print("fucking done")
